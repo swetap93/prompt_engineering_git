@@ -1,0 +1,209 @@
+Issue_Description,Category,Subcategory,Assignment_group,Resolution_Notes,Incident_Summary
+Performance issue in Oracle DB,Database,Oracle,Service Desk,"Performance issue in Oracle DB due high CPU usage in oracle DB due to inefficient query execution.
+Resolution:
+Execution plans optimized and indexes added.Post implementation system performance is normal.","Category: Database | Sub-Category: Oracle
+---
+Summary:
+Resolved Oracle database performance degradation stemming from high CPU usage caused by inefficient query execution. The resolution involved optimizing execution plans and adding necessary indexes.
+
+Resolution Steps:
+- Step 1: Identify Oracle database instances experiencing high CPU utilization and performance bottlenecks.
+- Step 2: Analyze database performance metrics (e.g., AWR/ASH reports, SQL monitoring) to pinpoint inefficient SQL queries consuming significant resources.
+- Step 3: Optimize the execution plans for identified inefficient queries. This may involve query rewriting, using hints, or adjusting database parameters.
+- Step 4: Create or modify database indexes to improve query performance and reduce I/O operations.
+
+Notes:
+- Steps 3 and 4 typically require DBA-level expertise and thorough testing in a non-production environment before implementation.
+- Post-implementation, monitor database performance to ensure sustained improvement and stability.
+---"
+webmail unable to access links,Password Reset,Webmail,Service Desk,"Issue:  webmail unable to access links
+
+Resolution
+
+1. Confirm the Email Provider:
+Identified which email service you're using (e.g., Gmail, Outlook, Yahoo).
+
+2. Initiate Password Reset:
+Followed the specific password reset process for user email provider, which will take to recovery link.
+
+Receiving the Email but Can't Access:
+Verified the Link: Ensure the link in the reset email is valid and hasn't expired.
+Clear Browser Cache/Cookies: Cached data can sometimes interfere with the reset process.
+
+Able to open links in emails","Category: Password Reset | Sub-Category: Webmail
+---
+Summary:
+Provides guidance for users experiencing difficulty accessing password reset links received in their webmail. This article details steps to initiate a password reset and troubleshoot common browser-related issues preventing link access.
+
+Resolution Steps:
+- **Step 1: Confirm Email Provider and Password Reset Need.**
+    *   Verify the user's specific webmail provider (e.g., Gmail, Outlook, Yahoo).
+    *   Confirm the user requires a password reset for their account.
+- **Step 2: Initiate Password Reset Process.**
+    *   Guide the user through the standard password reset procedure for their email provider to have a recovery link sent to their inbox.
+- **Step 3: Troubleshoot Inaccessible Recovery Link.**
+    *   If the user reports receiving the password reset email but is unable to open the recovery link:
+        *   **Check Link Validity:** Instruct the user to verify if the password reset link is still active and has not expired. If expired, advise them to re-initiate the password reset (return to Step 2).
+        *   **Clear Browser Cache & Cookies:** Guide the user to clear their web browser's cache and cookies. Explain that accumulated browser data can sometimes interfere with link functionality.
+- **Step 4: Re-attempt Link Access.**
+    *   After performing the troubleshooting steps, instruct the user to try opening the password reset link again.
+
+Notes:
+- This article specifically addresses issues with *accessing* password reset links after they have been received.
+- If the user is not receiving the password reset email at all, troubleshoot potential email delivery issues (e.g., spam folder, incorrect recovery email address).
+---"
+Poor Merge and Conflict Resolution,Inquiry_Help,Internal Application,Service Desk,Use third-party merge tools for conflict resolution. Migrate to a system like Git or TFVC with built-in merge tracking.,"Category: Inquiry_Help | Sub-Category: Internal Application
+---
+Summary:
+Provides guidance for resolving issues with poor merge and conflict resolution in internal applications. This article outlines both immediate tooling solutions and strategic recommendations for improving version control systems.
+
+Resolution Steps:
+- Step 1: **Assess Current Version Control System:** Identify the specific internal application and version control system (VCS) the user is experiencing merge and conflict resolution difficulties with.
+- Step 2: **Recommend Third-Party Merge Tool:** For immediate conflict resolution, advise the user to utilize a suitable third-party merge tool (e.g., KDiff3, Beyond Compare, Meld) to manage complex conflicts. Provide basic instructions or point to existing documentation for integrating and using the tool with their current VCS.
+- Step 3: **Document and Escalate Systemic Issues:** If poor merge and conflict resolution is a recurring problem or indicates a fundamental limitation of the current VCS, document the issue thoroughly. Escalate to the appropriate development or infrastructure team with a recommendation to evaluate migration to a modern VCS (e.g., Git, TFVC) that offers robust built-in merge tracking.
+
+Notes:
+- The recommendation for migrating to a new VCS (Git, TFVC) is a strategic initiative requiring project planning by development/infrastructure teams. L1/L2's role is to identify the need and escalate.
+- Ensure the user has access to or can procure the recommended third-party merge tools.
+---"
+Lack of Atomic Commits,Inquiry_Help,Internal Application,Service Desk,"Avoid large check-in; break changes into smaller, manageable chunks. Sitch to a modern VCS Like GIT, which guarantees atomic commits","Category: Inquiry_Help | Sub-Category: Internal Application
+---
+Summary:
+This article addresses issues arising from non-atomic code commits, which can lead to incomplete or unstable application states. It outlines best practices for managing code changes and recommends adopting modern version control systems to ensure commit atomicity.
+
+Resolution Steps:
+- Step 1: **Break Down Commits:** For any code changes, ensure they are broken down into smaller, logical, and manageable chunks. Each commit should represent a complete, testable unit of work.
+- Step 2: **Adopt Modern VCS:** Transition to a modern Version Control System (VCS) such as Git, which inherently guarantees atomic commits. This ensures that all changes within a commit are applied as a single, indivisible transaction, or none are.
+- Step 3: **Consult for Migration:** Before initiating a VCS migration, consult with the development lead or architecture team to plan the transition and ensure proper training for development teams on new VCS best practices.
+
+Notes:
+- Atomic commits are crucial for maintaining code integrity and preventing corrupted or inconsistent application states during development.
+- Adhering to smaller, focused commits improves code reviewability and simplifies potential rollbacks.
+---"
+File Corruption,Inquiry_Help,Internal Application,Service Desk,Use the Analyze.exe utility (included with sourcesafe) to detect and repair corruption. Restore from a backup if corruption is irreparable. Migrate to a modern version control system,"Category: Inquiry_Help | Sub-Category: Internal Application
+---
+Summary:
+This article provides instructions for diagnosing and resolving file corruption within the legacy SourceSafe version control system. It covers using the `Analyze.exe` utility for repair and outlines the process for restoring from backup if corruption is irreparable.
+
+Resolution Steps:
+- Step 1: **Diagnose and Repair with Analyze.exe**
+    - Locate the `Analyze.exe` utility, typically found in the SourceSafe installation directory (e.g., `C:\Program Files (x86)\Microsoft Visual SourceSafe\Win32`).
+    - Execute `Analyze.exe` and follow the on-screen prompts to scan for and attempt to repair any detected file corruption within the SourceSafe database.
+- Step 2: **Restore from Backup (If Repair Fails)**
+    - If `Analyze.exe` reports irreparable corruption or fails to resolve the issue, restore the SourceSafe database from the most recent known good backup.
+
+Notes:
+- `Analyze.exe` is a diagnostic and repair tool specific to Microsoft Visual SourceSafe.
+- Regular backups of the SourceSafe database are crucial for recovery from irreparable corruption.
+- For recurring corruption issues or to improve system stability, consider escalating for migration to a modern version control system.
+---"
+Laptop keyboard randomly stops working,Hardware,Keyboard,Service Desk,"Troubleshooting steps:
+
+Check for latest windows version, and keyboard drivers on your device
+go to settings> windows update> update
+go to device manager> keyboard> update the drivers
+
+Search for find and fix keyboard problems on your device and run the troubleshooter to see if it can find any issues.
+
+Also, connect an external keyboard to see if it stops working as well, if the external keyboard doesn't stop working then it is a hardware issue and you should get it replaced.
+
+Replace Laptop
+","Category: Hardware | Sub-Category: Keyboard
+---
+Summary:
+Provides a systematic troubleshooting guide for resolving intermittent functionality issues with a laptop's integrated keyboard. This article outlines steps to address potential software conflicts, driver issues, and diagnose hardware failures.
+
+Resolution Steps:
+- Step 1: Update Operating System and Drivers
+    - Ensure Windows is fully updated: Navigate to `Settings > Windows Update` and install all pending updates.
+    - Update keyboard drivers: Open `Device Manager > Keyboards`, right-click on the relevant keyboard device, and select `Update driver`.
+- Step 2: Run Keyboard Troubleshooter
+    - Utilize the built-in troubleshooter: Search for ""find and fix keyboard problems"" in the Windows search bar and follow the prompts to execute the diagnostic tool.
+- Step 3: Diagnose Hardware Fault
+    - Connect an external USB keyboard to the laptop.
+    - Observe if the external keyboard also experiences intermittent functionality issues.
+- Step 4: Confirm Hardware Fault and Action
+    - If the external keyboard functions correctly and does not stop working, this confirms a hardware defect with the integrated laptop keyboard.
+    - **Action:** Initiate the laptop replacement process.
+
+Notes:
+- These steps are designed to diagnose intermittent keyboard failures.
+- The external keyboard test in Step 3 is crucial for differentiating between software/driver issues and a physical hardware malfunction.
+---"
+How to setup a Webex meeting,Inquiry_Help,Internal Application,Service Desk,Educated customer on how he can do it going forward and can avoid a call to the IT desk . Customer was happy with the same and no other issues reported .,"Category: Inquiry_Help | Sub-Category: Internal Application
+---
+Summary:
+This article provides step-by-step instructions on how to schedule a Webex meeting using common methods, empowering users to independently manage their virtual collaboration needs.
+
+Resolution Steps:
+
+**Option 1: Scheduling via Webex Portal or Desktop Application**
+- Step 1: Open your web browser and go to your organization's Webex site (e.g., `yourcompany.webex.com`) or launch the Webex desktop application.
+- Step 2: Log in with your organizational credentials if prompted.
+- Step 3: On the main dashboard, click ""Schedule a Meeting"".
+- Step 4: Enter the required meeting details: Meeting Topic, Date, Time, Duration, Attendees' email addresses, and set a Meeting Password if desired.
+- Step 5: Review all details and click ""Schedule"". The meeting invitation will be sent to attendees.
+
+**Option 2: Scheduling via Microsoft Outlook Calendar**
+- Step 1: Open Microsoft Outlook and navigate to your Calendar view.
+- Step 2: Click ""New Meeting"" from the ribbon to create a new calendar invitation.
+- Step 3: In the meeting invitation window, locate and click the ""Add Webex Meeting"" button (usually found in the ""Meeting"" tab of the ribbon).
+- Step 4: Configure any Webex-specific options that appear (e.g., meeting type, password, audio options).
+- Step 5: Add required attendees, set the meeting date, start time, and end time.
+- Step 6: Add any additional agenda details in the meeting body.
+- Step 7: Click ""Send"". The meeting invitation, including Webex details, will be sent to attendees.
+
+Notes:
+- Ensure you have an active Webex account provisioned by your organization.
+- For Outlook integration, the Webex Productivity Tools or Webex Scheduler add-in must be installed. Contact IT Support if the ""Add Webex Meeting"" button is missing.
+- UI elements may vary slightly depending on your Webex version and organization's configuration.
+---"
+subscription Traps,Inquiry_Help,Internal Application,Service Desk,"Use Revo Uninstaller to remove the cleaner and leftover files, Switch to free/open-source alternatives.","Category: Inquiry_Help | Sub-Category: Internal Application
+---
+Summary:
+This article addresses issues related to unwanted ""cleaner"" software, often associated with subscription traps or intrusive behavior. It outlines the process for completely removing such applications and recommends transitioning to reliable free or open-source alternatives.
+
+Resolution Steps:
+- Step 1: **Identify and Prepare for Removal:**
+    *   Identify the specific ""cleaner"" software causing issues (e.g., subscription traps, unwanted pop-ups).
+    *   Ensure the application is fully closed before proceeding with uninstallation.
+- Step 2: **Perform Thorough Uninstallation:**
+    *   Download and install Revo Uninstaller (if not already present on the system).
+    *   Launch Revo Uninstaller, select the identified ""cleaner"" application from the list, and choose the ""Advanced"" uninstallation mode.
+    *   Follow the prompts to uninstall the application and remove any leftover files, folders, and registry entries detected by Revo Uninstaller.
+- Step 3: **Switch to Free/Open-Source Alternatives:**
+    *   Advise the user to switch to reputable free or open-source alternatives for system maintenance or specific functionalities, avoiding third-party ""cleaner"" software known for aggressive marketing or subscription models.
+
+Notes:
+- Revo Uninstaller is recommended for its ability to perform deep scans and remove residual files and registry entries that standard uninstallers often miss, preventing future issues.
+- Many ""cleaner"" applications can lead to unwanted subscriptions, performance issues, or security vulnerabilities. Prioritizing free/open-source tools from trusted sources is generally safer and more cost-effective.
+---"
+Malware Disguised as cleaners,Inquiry_Help,Internal Application,Service Desk,"Scan with Malwarebytes or HitmanPro, Download tools only from official sites, Stick to reputable software.","Category: Inquiry_Help | Sub-Category: Internal Application
+---
+Summary:
+Procedure for identifying and remediating systems infected with malware disguised as system optimization or cleaning tools. This article outlines steps for scanning and safe software acquisition.
+
+Resolution Steps:
+- Step 1: Direct the user to download either Malwarebytes or HitmanPro *exclusively* from its official vendor website (e.g., malwarebytes.com, hitmanpro.com).
+- Step 2: Instruct the user to run a full system scan using the downloaded anti-malware tool.
+- Step 3: Assist the user in reviewing scan results and removing or quarantining all detected threats.
+
+Notes:
+- Always verify the legitimacy of software before installation.
+- Avoid downloading tools from third-party download sites to prevent further infections.
+---"
+False Positives,Inquiry_Help,Internal Application,Service Desk,"Review files before deletion, Whitelist important folders, Use tools with granular control, Like Treesize to manually inspect storage.","Category: Inquiry_Help | Sub-Category: Internal Application
+---
+Summary:
+This article provides L1/L2 support with steps to prevent and resolve false positives encountered during automated file management or cleanup operations within internal applications. It focuses on ensuring data integrity and accurate identification of files for deletion.
+
+Resolution Steps:
+- Step 1: **Implement Whitelisting:** Proactively whitelist critical files, folders, and directories within relevant internal applications or automated cleanup tools to prevent them from being flagged as false positives.
+- Step 2: **Manual Pre-Deletion Review:** Before authorizing any automated deletion or cleanup process, always perform a thorough manual review of the proposed files and folders to confirm they are safe to remove.
+- Step 3: **Granular Storage Inspection:** For detailed investigation of potential false positives or unexpected storage usage, utilize tools with granular control (e.g., Treesize) to manually inspect storage volumes and identify important data.
+
+Notes:
+- False positives typically refer to important data being incorrectly identified for deletion by automated processes.
+- Always prioritize data integrity and user data protection.
+- Consult application-specific documentation for whitelisting procedures.
+---"
